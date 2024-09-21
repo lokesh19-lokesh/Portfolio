@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOKESH Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+
+<body>
+    <!-- Navbar header section -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <h2 class="logo-heading">Maddiboina Lokesh</h2>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <i class="fas fa-bars hamburger-icon"></i>
+                <i class="fas fa-times cross-icon"></i>
+            </div>
+            <div class="menu">
+                <ul class="menu-list">
+                    <li class="menu-list-items">
+                        <a class="links" href="#home">Home</a>
+                    </li>
+                    <li class="menu-list-items">
+                        <a class="links" href="#portfolio">Portfolio</a>
+                    </li>
+                    <li class="menu-list-items">
+                        <a class="links" href="#about">About</a>
+                    </li>
+                    <li class="menu-list-items">
+                        <a class="links" href="#contact">Contact Me</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+     <!-- Main hero banner -->
+<section id="home" class="hero">
+  <div class="intro">
+      <div class="headings">
+          <h3 class="greet-heading">Hello, I'm</h3>
+          <h1 class="my-heading">Maddiboina Lokesh</h1>
+          <h4 class="sub-heading">Keep Learning</h4>
+      </div>
+      
+  </div>
+  <img align="right" src="about.jpg" alt="pic" width="400" height="500">
+
+  <!-- Flying bird animation -->
+  <div class="bird-animation">
+      <img src="path_to_your_bird_image3.gif" class="flying-bird" alt="Flying Bird">
+  </div>
+</section>
+
+<!-- CSS -->
+<style>
+/* Basic styling for the hero section */
+.hero {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Bird animation container */
+.bird-animation {
+    position: absolute;
+    top: 20%;
+    left: 0;
+    width: 1000%;
+    height: 1000px;
+}
+
+/* Styling for the flying bird */
+.flying-bird {
+    position: absolute;
+    width: 300px;
+    animation: flyAcross 8s linear infinite;
+}
+
+/* Keyframes for flying bird */
+@keyframes flyAcross {
+    0% {
+        left: -150px; /* Start off-screen */
+        top: 20%;
+    }
+    50% {
+        top: 5%; /* Fly up a little */
+    }
+    100% {
+        left: 100vw; /* Fly off-screen to the right */
+        top: 20%;
+    }
+}
+</style>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+        <div class="portfolio-heading">
+            <h1 class="my-heading text-center">This Portfolio Lets You Know</h1>
+        </div>
+        <div class="portfolio-content">
+            <div class="my-row">
+                <div class="my-col">
+                    <div class="my-card port-card" onclick="showDetails('education-details')">
+                        <div class="image">
+                            <img src="1.jpg" alt="Education">
+                        </div>
+                        <h3 class="greet-heading blue-text">My Education</h3>
+                        <p class="small-para blue-text">Details</p>
+                    </div>
+                    <div id="education-details" class="details-content">
+                        <p>B.Tech KL Deemed to be University 2021 - 2025 CGPA 9.11</p>
+                        <p>Board of Intermediate Education A.P Sri Chaitanya junior collage 07/2019 - 03/2021 Percentage 87%</p>
+                        <p>SSC Sri Chaitanya 07/2018 - 04/2019 GPA 9.5</p>
+                    </div>
+                </div>
+                <div class="my-col">
+                    <div class="my-card port-card" onclick="showDetails('projects-details')">
+                        <div class="image">
+                            <img src="2.png" alt="Project">
+                        </div>
+                        <h3 class="greet-heading blue-text">Projects</h3>
+                        <p class="small-para blue-text">Details</p>
+                    </div>
+                    <div id="projects-details" class="details-content">
+                        <p>PROJECTS Full Stack Development Project Management System Role: Frontend developer Skills Acquired: HTML, CSS, MY SQL, DJANGO, EP, Node js, React, Mongodb, spring boot.</p>
+                        <p>Building end-to-end web applications using AWS Serverless Architecture using AWS Amplify, Amazon API Gateway, AWS Lambda, AWS DynamoDB and IAM</p>
+                    </div>
+                </div>
+                <div class="my-col">
+                    <div class="my-card port-card" onclick="showDetails('club-details')">
+                        <div class="image">
+                            <img src="3.jpeg" alt="Trailblazer student club">
+                        </div>
+                        <h3 class="greet-heading blue-text">Student Club</h3>
+                        <p class="small-para blue-text">Trailblazer</p>
+                    </div>
+                    <div id="club-details" class="details-content">
+                        <p>Lead a Technology club, "TRAILBLAZERS STUDENT CLUB" as a Team Lead where we work on Salesforce(admin).</p>
+                    </div>
+                </div>
+            </div>
+            <div class="my-row">
+                <div class="my-col">
+                    <div class="my-card port-card" onclick="showDetails('certificates-details')">
+                        <div class="image">
+                            <img src="4.png" alt="global certificates">
+                        </div>
+                        <h3 class="greet-heading blue-text">Global Certificates</h3>
+                        <p class="small-para blue-text">Completed</p>
+                    </div>
+                    <div id="certificates-details" class="details-content">
+                        <p>Red Hat Certified Enterprise Application Developer (08/2023 - 08/2026) Issued by Red Hat</p>
+                        <p>Associate Cloud Engineer Certification (05/2024 - 05/2027) Issued by Google Cloud</p>
+                        <p>AWS Certified Cloud Practitioner (06/2024 - 06/2027) Issued by Amazon Web Services Training and Certification</p>
+                    </div>
+                </div>
+                <div class="my-col">
+                    <div class="my-card port-card" onclick="showDetails('internships-details')">
+                        <div class="image">
+                            <img src="5.jpg" alt="INTERNSHIP">
+                        </div>
+                        <h3 class="greet-heading blue-text">Internships</h3>
+                        <p class="small-para blue-text">Done</p>
+                    </div>
+                    <div id="internships-details" class="details-content">
+                        <p>Worked as a summer intern on AWS Cloud at AICTE and acquired skills on AWS cloud computing 12/2022 - 02/2023</p>
+                    </div>
+                </div>
+                <div class="my-col">
+                    <div class="my-card port-card" onclick="showDetails('social-details')">
+                        <div class="image">
+                            <img src="6.jpg" alt="Social activities">
+                        </div>
+                        <h3 class="greet-heading blue-text">Social Activities and Awards</h3>
+                        <p class="small-para blue-text">Details</p>
+                    </div>
+                    <div id="social-details" class="details-content">
+                        <p>Contributed to the cause "Bridge The Digital Divide" by developing an interactive web application for Balaswecha. The project, an initiative of Swecha AP, aims to digitize school content in the process of establishing a Knowledge Commons. I worked for a duration of 90 hours as part of a social internship from June 6, 2022, to June 13, 2022, at KL University, Guntur Campus, followed by online contributions in July 2022. During the internship program</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="about-text">
+            <h1 class="my-heading">About Me</h1>
+            <p class="lead-para">
+              I am a passionate and motivated individual eager to apply my skills in cloud computing and full-stack development to real-world challenges. My technical expertise spans across frontend technologies like HTML, CSS, and React.js, backend systems such as Node.js and MongoDB, and cloud platforms like AWS, with certifications in AWS Cloud Practitioner and Red Hat. During my internship with AWS Cloud, I gained hands-on experience in deploying cloud infrastructure, automating deployments, and managing resources efficiently. My project work, including full-stack web applications utilizing serverless architecture, demonstrates my ability to deliver impactful solutions. I’m committed to continuous learning and growth in the tech industry.
+            </p>
+
+            <!-- Added buttons here -->
+            <div class="intro-buttons">
+                <button id="hire-me-btn" class="btn common-btn">Hire Me</button>
+                <button id="get-resume-btn" class="btn ghost-btn">Get Resume</button>
+            </div>
+        </div>
+        <div class="about-image">
+           <!-- <img src="about1.png" alt="About Image"> -->
+        </div>
+    </section>
+
+    <!-- Contact me section -->
+    <section class="contact" id="contact">
+        <div class="contact-heading">
+            <h1 class="my-heading text-center">Contact Me</h1>
+        </div>
+        <div class="contact-content">
+            <div class="contact-form-container">
+                <h1 class="greet-heading">Get In Touch</h1>
+                <form class="contact-form" action="#" method="POST">
+                    <input class="form-controls" type="text" name="name" placeholder="Your Name" required>
+                    <input class="form-controls" type="email" name="email" placeholder="Your Email" required>
+                    <input class="form-controls" type="tel" name="phone" placeholder="Your Phone" required>
+                    <textarea class="form-controls" placeholder="Write your message" name="message" cols="30" rows="10" required></textarea>
+                    <input class="form-btn btn common-btn" type="submit" value="Send Message">
+                </form>
+            </div>
+            <div class="contact-details">
+                <h1 class="greet-heading">My Contact Details</h1>
+                <div class="details">
+                    <h5 class="contact-heading">EMAIL</h5>
+                    <p class="contact-text">2100030312cseh@gmail.com</p>
+                </div>
+                <div class="details">
+                    <h5 class="contact-heading">PHONE</h5>
+                    <p class="contact-text">+91 7995214005</p>
+                </div>
+                <div class="details">
+                    <h5 class="contact-heading">ALTERNATIVE PHONE</h5>
+                    <p class="contact-text">+91 9347527990</p>
+                </div>
+                <div class="details">
+                    <h5 class="contact-heading">ADDRESS</h5>
+                    <p class="contact-text">8-70, Kothamaddiboinavaripalem</p>
+                    <p>Bapatla</p>
+                    <p>522101, Andhra Pradesh, India</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer section -->
+<footer class="footer">
+  <div class="footer-content text-center">
+      <div class="social-links">
+          <div class="footer-menu">
+              <ul class="footer-menu-list">
+                  <li class="footer-list-items">
+                      <a class="footer-links" href="https://www.facebook.com/lokesh.maddibion/" target="_blank">
+                          <i class="fab fa-facebook-f"></i>
+                      </a>
+                  </li>
+                  <li class="footer-list-items">
+                      <a class="footer-links" href="https://www.instagram.com/lokesh_maddiboina/?hl=en" target="_blank">
+                          <i class="fab fa-instagram"></i>
+                      </a>
+                  </li>
+                  <li class="footer-list-items">
+                      <a class="footer-links" href="https://www.linkedin.com/in/maddiboina-lokesh-340660226/" target="_blank">
+                          <i class="fab fa-linkedin-in"></i>
+                      </a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </div>
+</footer>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" integrity="sha512-uKQ39gEGiyUJl4AI6L+ekBdGKpGw4xJ55+xyJG7YFlJokPNYegn9KwQ3P8A7aFQAUtUsAQHep+d/lrGqrbPIDQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
